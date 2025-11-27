@@ -8,7 +8,7 @@ def tampil_model_rekomendasi(pilih_jenis):
         clear()
         print(f"REKOMENDASI {jenis_senjata[pilih_jenis].upper()}:")
 
-<<<<<<< HEAD
+
         daftar = []
         for j in range(len(rekomendasi_list[pilih_jenis])):
             daftar.append(f"{j+1}. {rekomendasi_list[pilih_jenis][j]}")
@@ -33,7 +33,7 @@ def tampil_model_rekomendasi(pilih_jenis):
         if pilih < len(rekomendasi_list[pilih_jenis]):
             tampil_statistik(pilih_jenis, pilih)
         elif pilih == len(rekomendasi_list[pilih_jenis]):
-=======
+
         pilih_model = []
         for j in range(len(rekomendasi_list[pilih_jenis])):
             pilih_model.append(f"{j+1}. {rekomendasi_list[pilih_jenis][j]}")
@@ -57,7 +57,8 @@ def tampil_model_rekomendasi(pilih_jenis):
         if pilih_model < len(rekomendasi_list[pilih_jenis]):
             tampil_statistik(pilih_jenis, pilih_model)
         elif pilih_model == len(rekomendasi_list[pilih_jenis]):
->>>>>>> e4931f6032d848a51c730afe515aecf187898e3e
+
+
             break
         else:
             print("Pilihan tidak valid!")

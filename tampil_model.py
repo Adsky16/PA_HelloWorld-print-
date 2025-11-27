@@ -9,7 +9,8 @@ def tampil_model():
         clear()
         print("=== DAFTAR JENIS SENJATA ===")
 
-<<<<<<< HEAD
+
+
         daftar = []
         for i in range(len(jenis_senjata)):
             daftar.append(f"{i+1}. {jenis_senjata[i]}")
@@ -30,7 +31,7 @@ def tampil_model():
             return
             
         jenis = int(nomor_pilihan.split('.')[0]) - 1
-=======
+
         pilihan_jenis = []
         for i in range(len(jenis_senjata)):
             pilihan_jenis.append(f"{i+1}. {jenis_senjata[i]}")
@@ -50,7 +51,7 @@ def tampil_model():
             return
             
         jenis = int(selected_jenis.split('.')[0]) - 1
->>>>>>> e4931f6032d848a51c730afe515aecf187898e3e
+
         
         if jenis < len(jenis_senjata):
             clear()
@@ -61,7 +62,7 @@ def tampil_model():
                 pilihan_model.append(f"{j+1}. {model_senjata[jenis][j]}")
             pilihan_model.append(f"{len(model_senjata[jenis])+1}. Kembali")
             
-<<<<<<< HEAD
+
             pertanyaan_model = [
                 inquirer.List('pilihan_model',
                             message="Pilih model",
@@ -77,7 +78,7 @@ def tampil_model():
                 continue
                 
             model = int(nomor_model.split('.')[0]) - 1
-=======
+
             questions_model = [
                 inquirer.List('pilihan_model',
                             message="Pilih model",
@@ -92,8 +93,8 @@ def tampil_model():
                 continue
                 
             model = int(selected_model.split('.')[0]) - 1
->>>>>>> e4931f6032d848a51c730afe515aecf187898e3e
-            
+
+
             if model < len(model_senjata[jenis]):
                 clear()
                 

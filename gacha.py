@@ -1,16 +1,16 @@
 import random
 from fungsi import clear, pause
 from data import jenis_senjata, model_senjata
-<<<<<<< HEAD
+
 import inquirer
-=======
->>>>>>> e4931f6032d848a51c730afe515aecf187898e3e
+
 
 def menu_gacha():
     while True:
         clear()
         print("=== MENU GACHA SENJATA ===")
-<<<<<<< HEAD
+
+
 
         pertanyaan = [
             inquirer.List('pilihan',
@@ -21,14 +21,15 @@ def menu_gacha():
         jawaban = inquirer.prompt(pertanyaan)
         nomor_pilihan = jawaban['pilihan']
         pilih = nomor_pilihan.split('.')[0]
-=======
+
         print("1. Gacha Random")
         print("2. Gacha Pilih Class")
         print("3. Gacha 2x (1 Random + 1 Pilih Class)")
         print("4. Kembali")
         
         pilih = input("Pilih menu: ")
->>>>>>> e4931f6032d848a51c730afe515aecf187898e3e
+
+
         
         if pilih == '1':
             clear()
@@ -45,7 +46,7 @@ def menu_gacha():
         elif pilih == '2':
             clear()
             print("=== GACHA PILIH CLASS ===")
-<<<<<<< HEAD
+
 
             pilihan = []
             for i in range(len(jenis_senjata)):
@@ -76,7 +77,7 @@ def menu_gacha():
                 print(f"\nSenjata: {senjata}")
                 print(f"Jenis: {jenis_senjata[pilih]}")
                 pause()
-=======
+
             for i in range(len(jenis_senjata)):
                 print(f"{i+1}. {jenis_senjata[i]}")
             
@@ -93,7 +94,7 @@ def menu_gacha():
             except ValueError:
                 print("Input harus angka!")
             pause()
->>>>>>> e4931f6032d848a51c730afe515aecf187898e3e
+
             
         elif pilih == '3':
             clear()
@@ -109,7 +110,8 @@ def menu_gacha():
             
             clear()
             print("=== GACHA KEDUA (PILIH CLASS) ===")
-<<<<<<< HEAD
+
+
 
             pilihan = []
             for i in range(len(jenis_senjata)):
@@ -140,7 +142,7 @@ def menu_gacha():
                 print(f"Senjata 1: {senjata1} ({jenis_senjata[jenis1]})")
                 print(f"Senjata 2: {senjata2} ({jenis_senjata[pilih]})")
                 pause()
-=======
+
             for i in range(len(jenis_senjata)):
                 print(f"{i+1}. {jenis_senjata[i]}")
             
@@ -159,14 +161,13 @@ def menu_gacha():
             except ValueError:
                 print("Input harus angka!")
             pause()
->>>>>>> e4931f6032d848a51c730afe515aecf187898e3e
-            
+
+
         elif pilih == '4':
             break
         else:
             print("Pilihan tidak valid!")
             pause()
-<<<<<<< HEAD
-=======
+
 menu_gacha()
->>>>>>> e4931f6032d848a51c730afe515aecf187898e3e
+

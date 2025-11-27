@@ -8,7 +8,7 @@ def tampil_rekomendasi():
         clear()
         print('=== REKOMENDASI SENJATA ===')
 
-<<<<<<< HEAD
+
         daftar = []
         for i in range(len(jenis_senjata)):
             daftar.append(f"{i+1}. {jenis_senjata[i]}")
@@ -29,7 +29,7 @@ def tampil_rekomendasi():
             return
         
         pilih = int(nomor_pilihan.split('.')[0]) - 1
-=======
+
         pilih_jenis = []
         for i in range(len(jenis_senjata)):
             pilih_jenis.append(f"{i+1}. {jenis_senjata[i]}")
@@ -49,7 +49,7 @@ def tampil_rekomendasi():
             return
         
         pilih = int(selected_jenis.split('.')[0]) - 1
->>>>>>> e4931f6032d848a51c730afe515aecf187898e3e
+
 
         if pilih < len(jenis_senjata):
             tampil_model_rekomendasi(pilih)
