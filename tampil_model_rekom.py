@@ -8,6 +8,32 @@ def tampil_model_rekomendasi(pilih_jenis):
         clear()
         print(f"REKOMENDASI {jenis_senjata[pilih_jenis].upper()}:")
 
+
+        daftar = []
+        for j in range(len(rekomendasi_list[pilih_jenis])):
+            daftar.append(f"{j+1}. {rekomendasi_list[pilih_jenis][j]}")
+        daftar.append(str(len(rekomendasi_list[pilih_jenis])+1) + ". Kembali")
+
+        pertanyaan = [
+            inquirer.List('daftar',    
+                        message="Pilih model untuk lihat statistik",
+                        choices=daftar,
+                        carousel=True),
+        ]
+
+        jawaban = inquirer.prompt(pertanyaan)
+
+        nomor_pilihan = jawaban['daftar']
+
+        if nomor_pilihan == (str(len(rekomendasi_list[pilih_jenis])+1) + ". Kembali"):
+            return
+        
+        pilih = int(nomor_pilihan.split('.')[0]) - 1
+
+        if pilih < len(rekomendasi_list[pilih_jenis]):
+            tampil_statistik(pilih_jenis, pilih)
+        elif pilih == len(rekomendasi_list[pilih_jenis]):
+
         pilih_model = []
         for j in range(len(rekomendasi_list[pilih_jenis])):
             pilih_model.append(f"{j+1}. {rekomendasi_list[pilih_jenis][j]}")
@@ -31,6 +57,8 @@ def tampil_model_rekomendasi(pilih_jenis):
         if pilih_model < len(rekomendasi_list[pilih_jenis]):
             tampil_statistik(pilih_jenis, pilih_model)
         elif pilih_model == len(rekomendasi_list[pilih_jenis]):
+
+
             break
         else:
             print("Pilihan tidak valid!")
